@@ -4,14 +4,15 @@
   "private": true,
   "main": "server.js",
   "engines": {
-    "node": "18.17.0",
+    "node": ">=18.17.0",
     "npm": ">=9.6.7"
   },
   "scripts": {
     "build": "esbuild server.js --platform=node --bundle --minify --outfile=dist/server.js",
     "build-watch": "esbuild server.js --platform=node --bundle --minify --outfile=dist/server.js --watch",
     "build-start": "node dist/server.js",
-    "start": "nodemon ."
+    "dev": "nodemon .",
+    "start": "node ."
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",
